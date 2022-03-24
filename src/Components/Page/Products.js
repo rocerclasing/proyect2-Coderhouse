@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
-const Products = () => {
+const Products = ({id}) => {
 
   const [fruit,setFruit] = useState([])
 
@@ -14,7 +14,7 @@ const Products = () => {
     try{
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data)
+        setFruit(data)
     }
     catch(error)
     {
@@ -29,9 +29,10 @@ const Products = () => {
        <ContainerProducts>
             {fruit.map((products,index)=>{
               return(
-                <Producto>
+                <Producto key={products.id}>
                         <div key={products.id}>
-                            {products.name}
+                            <h2>{products.name}</h2>
+                        <br/> <img  heigth="300px"width="300px"src={products.img}/>
                         </div>
                 </Producto>
               );

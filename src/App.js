@@ -7,14 +7,16 @@ import Blog from'../../proyecto-oficial/src/Components/Page/Blog';
 import ListContainer from'../../proyecto-oficial/src/Components/Page/ListContainer';
 import Error404 from'../../proyecto-oficial/src/Components/Page/Error404';
 import ContactsForm from './Components/Page/ContactsForm';
+import Category from'./Components/Page/Category';
 function App() {
   return (
     <Contenedor>
       <Menu>
           <Link to="/">Home</Link> 
-          <Link to="/ListContainer">List of products</Link> 
+          <Link to="/ListContainer">List of products</Link>
           <Link to="/Blog">Blog</Link> 
           <Link to="/ContactForm">Contact Form</Link>
+          <Link to="/Products/:id">CategoryFruits</Link>
       </Menu>
       <main>
         <Routes>
@@ -23,12 +25,9 @@ function App() {
               <Route path="/Blog" element={<Blog/>}/>
               <Route path="/ListContainer" element={<ListContainer/>}/>
               <Route path="/ContactForm" element={<ContactsForm/>}/>
-         
+              <Route path="/Products/:id" element={<Category/>}/>
         </Routes>
       </main>
-      <aside>
-         <h3>Side bar</h3>
-      </aside>
     </Contenedor>
   )
 }
