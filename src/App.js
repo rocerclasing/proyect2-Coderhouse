@@ -1,13 +1,17 @@
-
+// estilos-styled
 import './App.css';
 import styled from 'styled-components';
+// react router dom
 import{Link,Route,Routes} from'react-router-dom';
+// Componentes
 import Home from'../../proyecto-oficial/src/Components/Page/Home';
 import Blog from'../../proyecto-oficial/src/Components/Page/Blog';
 import ListContainer from'../../proyecto-oficial/src/Components/Page/ListContainer';
 import Error404 from'../../proyecto-oficial/src/Components/Page/Error404';
 import ContactsForm from './Components/Page/ContactsForm';
 import Category from'./Components/Page/Category';
+
+
 function App() {
   return (
     <Contenedor>
@@ -17,7 +21,6 @@ function App() {
           <Link to="/Blog">Blog</Link> 
           <Link to="/ContactForm">Contact Form</Link>
           <Link to="/Products/:id">CategoryFruits</Link>
-          <Link to=""></Link>
       </Menu>
       <main>
         <Routes>
@@ -29,6 +32,9 @@ function App() {
               <Route path="/Products/:id" element={<Category/>}/>
         </Routes>
       </main>
+        <aside>
+          
+        </aside>
     </Contenedor>
   )
 }
