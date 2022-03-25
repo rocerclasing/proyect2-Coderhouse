@@ -6,7 +6,7 @@ const DetailCard = () => {
     <div>
         <ContainerDetail>
             <Plantilla>
-              
+                  
             </Plantilla>
         </ContainerDetail>
       
