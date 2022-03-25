@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useParams } from "react-router-dom";
 import styled from 'styled-components';
 import Products from './Products';
-const Category = () => {
+const Category = ({producto}) => {
     const[Category,setCategory] = useState(null);
     const{id} = useParams();
    //  todo lo que entra en la url es un string 
