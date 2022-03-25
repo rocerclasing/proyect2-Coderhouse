@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from'react-router-dom';
-
+// Provvedor del context 
+import { ProveedorCarrito} from'./Components/Page/Context/Context';
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-       <App />
-    </BrowserRouter>
+        <BrowserRouter>
+          <ProveedorCarrito>
+            <App />
+          </ProveedorCarrito>
+        </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
