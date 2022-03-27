@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useParams } from "react-router-dom";
 import styled from 'styled-components';
+import DetailCard from '../../Components/Page/DetailCard/DetailCard';
 import Products from './Products';
 const Category = ({producto}) => {
   const[Category,setCategory] = useState(null);
@@ -11,7 +12,7 @@ const Category = ({producto}) => {
   },[])
 
   const getfruits = async(id)=>{
-   const url = "https://run.mocky.io/v3/ed8ee268-e8f3-43e5-ae3e-cc4d1521ed79"
+   const url = "data.json"
     try{
      const res = await fetch(url);
      const data = await res.json();
@@ -39,7 +40,7 @@ const Category = ({producto}) => {
     <div>
       <ContainerCategory>
                <h1>Category</h1>
-               {Category&& <div key={Category.id}><Products Category={id}/>{Category.name}</div>}
+               {Category&& <div key={Category.id}><Products Category={id}/>{<DetailCard/>}</div>}
       </ContainerCategory>
     </div>
   )

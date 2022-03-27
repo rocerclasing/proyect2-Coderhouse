@@ -1,22 +1,28 @@
 import React from 'react'
+import {Link,useParams} from 'react-router-dom';
 import styled from 'styled-components';
-import {useParams} from 'react-router-dom';
-const DetailCard = () => {
+const DetailCard = ({products}) => {
     const {ID}= useParams();
-  
-  return (
-    <div>
-        <ContainerDetail>
-            <Plantilla>
-                  
-            </Plantilla>
-        </ContainerDetail>
+    return(  
+            <ContainerProducts>
+              <Plantilla  key={products.id}>
+                <Boton>Añadir al carrito carrito</Boton>
+              <div key={products.id}>
+               <h2><Link to="/Products/:id">{products.name}</Link></h2>
+               <br/> <img  heigth="300px"width="300px"src={products.img}/>
+               <p>Lorem ipsum noxnsnxnsnnklxlxsknxklxnlkn</p>
+              </div>
+              </Plantilla>
+            </ContainerProducts>
+     
+    )
+    
       
-    </div>
-  )
+  
+  
 }
 
-const ContainerDetail = styled.div`
+const ContainerProducts = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -34,5 +40,26 @@ const Plantilla =  styled.div`
         font-weight: bold;
     }
 `;
+ 
+const Boton = styled.button`
+    border: none;
+    background: #1c85e8;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    transition: .3s ease all;
+ 
+    &:hover {
+        background: #1c6ab9;
+    }
+`;
+
+
 
 export default DetailCard

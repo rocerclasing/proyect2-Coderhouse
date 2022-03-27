@@ -13,10 +13,9 @@ const ListContainer = () => {
     <div>
     
       <h1>List of product</h1>
-      <Link to="/Products/:id">See more detail </Link>
      <Products/>
      
-        <button>AddtoCarrito</button>
+      
     
     </div>
   )
