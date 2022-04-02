@@ -9,9 +9,7 @@ import CarritoContext from './Components/Page/Context/Context';
 ReactDOM.render(
   <React.StrictMode>
         <BrowserRouter>
-          <CarritoContext.Provider>
              <App />
-           </CarritoContext.Provider>
         </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

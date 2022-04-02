@@ -1,9 +1,8 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import ItemCount from '../../ItemCount/ItemCount';
-
-const DetailCard = ({producto,onAdd}) => {
+import ItemCount from'../../ItemCount/ItemCount';
+const DetailCard = ({producto}) => {
    console.log(producto)
    
 
@@ -14,9 +13,8 @@ const DetailCard = ({producto,onAdd}) => {
                <h2>{producto.name}</h2>
                <br/> <img  heigth="300px"width="300px"src={producto.img}/>
                <p>Lorem ipsum noxnsnxnsnnklxlxsknxklxnlkn</p>
+               <ItemCount/>
               </div>
-              <ItemCount onAdd={onAdd}/>
-            
               </Plantilla>
             </ContainerProducts>
      

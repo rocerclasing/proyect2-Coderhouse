@@ -3,7 +3,7 @@ import React,{useState} from "react";
 const CarritoContext = React.createContext();
 
 
-const CartProvider = (props)=>{
+const CartProvider = ()=>{
     // Estado inicializado
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
@@ -52,7 +52,7 @@ const CartProvider = (props)=>{
                         deleteCart, 
                    }}
         >
-            {props.children}
+        
         </CarritoContext.Provider>
     )
 

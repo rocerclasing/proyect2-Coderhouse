@@ -5,16 +5,16 @@ import styled from 'styled-components';
 import{Link,Route,Routes} from'react-router-dom';
 // Componentes
 import Home from'../../proyecto-oficial/src/Components/Page/Home';
-
 import ListContainer from'../../proyecto-oficial/src/Components/Page/ListContainer';
 import Error404 from'../../proyecto-oficial/src/Components/Page/Error404';
 import ContactsForm from './Components/Page/ContactsForm';
 import ItemDetail from './Components/Page/ItemDetail';
-
+import CartWidget from './Components/CartWidget/CartWidget';
 
 function App() {
   return (
     <Contenedor>
+      <CartWidget/>
       <Menu>
           <Link to="/">Home</Link> 
           <Link to="/ListContainer">List of products</Link>

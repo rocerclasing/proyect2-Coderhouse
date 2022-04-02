@@ -1,9 +1,7 @@
 import React, { useState,useContext } from 'react'
-import CarritoContext from '../Page/Context/Context';
 
 const ItemCount = ({initial,stock}) => {
-  const cartContext = useContext(CarritoContext);
-  const { cart, deleteCartById, deleteCart } = CarritoContext;
+
 
 
   const[qty,setQty] = useState(initial=1);
@@ -17,6 +15,8 @@ const ItemCount = ({initial,stock}) => {
       setQty(qty - num2)
          
     }
+
+    
 
   return (
          <div className="count-container">

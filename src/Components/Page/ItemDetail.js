@@ -1,14 +1,10 @@
 import React,{useState,useEffect,useContext} from 'react'
 import { useParams } from "react-router-dom";
 import DetailCard from './DetailCard/DetailCard';
-import CarritoContext from './Context/Context';
 const ItemDetail = () => {
     const [fruit,setFruit] = useState(null)
     const {id}= useParams();
    console.log(id)
-
-   const cartContext = useContext(CarritoContext);
-   const { addToCart} = CarritoContext;
    
     useEffect(()=>{
       fetch('../data.json') 
@@ -32,7 +28,7 @@ const ItemDetail = () => {
   return (
     <div>
        <h1>Detalle de la plantilla</h1>
-     { fruit && <DetailCard producto={fruit} addToCart={addToCart}/>}
+     { fruit && <DetailCard producto={fruit}/>}
 
     </div>
   )
