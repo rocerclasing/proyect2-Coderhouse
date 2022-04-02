@@ -1,9 +1,10 @@
 import React, { useState,useContext } from 'react'
-
+import CarritoContext from '../Page/Context/Context'
 const ItemCount = ({initial,stock}) => {
 
-
-
+const caritoContext = useContext(CarritoContext);
+const{addToCart}=useContext();
+console.log(addToCart)
   const[qty,setQty] = useState(initial=1);
 
     const addProduct = (num)=>{
@@ -42,7 +43,7 @@ const ItemCount = ({initial,stock}) => {
         className="button-primary"
         onClick={() => onAdd(qty)}
         disabled={stock === 0 ? true : null}
-      
+        addToCart={addToCart}
       >
         Añadir
       </button>
