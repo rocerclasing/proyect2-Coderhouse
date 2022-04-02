@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import{Link,Route,Routes} from'react-router-dom';
 // Componentes
 import Home from'../../proyecto-oficial/src/Components/Page/Home';
-import Blog from'../../proyecto-oficial/src/Components/Page/Blog';
+
 import ListContainer from'../../proyecto-oficial/src/Components/Page/ListContainer';
 import Error404 from'../../proyecto-oficial/src/Components/Page/Error404';
 import ContactsForm from './Components/Page/ContactsForm';
-import Category from'./Components/Page/Category';
+import ItemDetail from './Components/Page/ItemDetail';
 
 
 function App() {
@@ -18,22 +18,20 @@ function App() {
       <Menu>
           <Link to="/">Home</Link> 
           <Link to="/ListContainer">List of products</Link>
-          <Link to="/Blog">Blog</Link> 
           <Link to="/ContactForm">Contact Form</Link>
-          <Link to="/Products/:id">CategoryFruits</Link>
+          {/* <Link to="/Products/:id">CategoryFruits</Link> */}
       </Menu>
       <main>
         <Routes>
               <Route path="*"element={<Error404/>}/>
               <Route path="/"  element={<Home/>}/>
-              <Route path="/Blog" element={<Blog/>}/>
               <Route path="/ListContainer" element={<ListContainer/>}/>
               <Route path="/ContactForm" element={<ContactsForm/>}/>
-              <Route path="/Products/:id" element={<Category/>}/>
+              <Route path="/Products/:id" element={<ItemDetail/>}/>
         </Routes>
       </main>
         <aside>
-          
+          <h2>Sidebar</h2>
         </aside>
     </Contenedor>
   )

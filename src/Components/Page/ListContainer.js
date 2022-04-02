@@ -3,12 +3,10 @@ import Products from './Products'
 import { Link } from 'react-router-dom'
 import { ProveedorCarrito} from'../Page/Context/Context';
 // Context
-import {ContextoCarrito} from'../Page/Context/Context';
-import { useContext } from 'react';
+import Context from '../Page/Context/Context';
 
 const ListContainer = () => {
-  const dato= useContext(ContextoCarrito);
- console.log(dato)
+
   return (
     <div>
     

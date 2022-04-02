@@ -1,17 +1,22 @@
-import React from 'react'
-import {Link,useParams} from 'react-router-dom';
+import React,{useContext} from 'react'
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-const DetailCard = ({products}) => {
-    const {ID}= useParams();
+import ItemCount from '../../ItemCount/ItemCount';
+
+const DetailCard = ({producto,onAdd}) => {
+   console.log(producto)
+   
+
     return(  
             <ContainerProducts>
-              <Plantilla  key={products.id}>
-                <Boton>Añadir al carrito carrito</Boton>
-              <div key={products.id}>
-               <h2><Link to="/Products/:id">{products.name}</Link></h2>
-               <br/> <img  heigth="300px"width="300px"src={products.img}/>
+              <Plantilla  key={producto.id}>
+              <div key={producto.id}>
+               <h2>{producto.name}</h2>
+               <br/> <img  heigth="300px"width="300px"src={producto.img}/>
                <p>Lorem ipsum noxnsnxnsnnklxlxsknxklxnlkn</p>
               </div>
+              <ItemCount onAdd={onAdd}/>
+            
               </Plantilla>
             </ContainerProducts>
      

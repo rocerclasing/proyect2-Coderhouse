@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
   
 const Products = ({id}) => {
 
@@ -33,12 +34,12 @@ const Products = ({id}) => {
               return(
                 <Producto key={products.id}>
                         <div key={products.id}>
-                            <h2><Link to="/Products/:id">{products.name}</Link></h2>
+                            <h2><Link to={`/Products/${products.id}`}>{products.name}</Link></h2>
                             
                         <br/> <img  heigth="300px"width="300px"src={products.img}/>
                         </div>
                         <Link to={`/Products/${products.id}`}>See more detail</Link>
-                </Producto>
+                </Producto>  
               );
 
             })}
