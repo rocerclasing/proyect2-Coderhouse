@@ -3,7 +3,7 @@ import React,{useState} from "react";
 const CarritoContext = React.createContext();
 
 
-const CartProvider = ()=>{
+const CarritoProvider = ()=>{
     // Estado inicializado
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
