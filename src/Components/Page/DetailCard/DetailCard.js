@@ -1,10 +1,11 @@
-import React from 'react'
+
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import ItemCount from'../../ItemCount/ItemCount';
 const DetailCard = ({producto}) => {
    console.log(producto)
-   
+
+
 
     return(  
             <ContainerProducts>
